@@ -5,6 +5,7 @@ This project is a Python-based, menu-driven console application that analyzes la
 All steps are executed interactively through a command-line interface.
 
 
+
 ## What This Project Does
 
 The application:
@@ -16,6 +17,7 @@ The application:
 - Flags suspicious transactions based on customer risk and transaction patterns
 - Evaluates detection performance and estimates financial impact
 - Exports CSV and text-based summary reports
+
 
 
 ## Data Used
@@ -41,7 +43,7 @@ The dataset contains transaction timestamps, amounts, merchant information, cate
 
 
 
-## Processing Pipeline (What Actually Happens)
+## Processing Pipeline
 
 ### 1. Data Loading
 Both datasets are loaded and concatenated into a single DataFrame using the `DataManager` class.
@@ -111,6 +113,7 @@ The following analyses are produced:
 These visualizations help reveal behavioral patterns, validate risk assumptions, and support the design of downstream customer risk scoring and transaction flagging logic.
 
 
+
 ## Customer Feature Engineering
 
 Customer profiles are constructed by grouping transactions by card number (`cc_num`).  
@@ -128,6 +131,7 @@ For each customer, the following behavioral features are computed:
 
 Result:
 - **999 customer-level profiles**, one per card
+
 
 
 ## Customer Risk Scoring
@@ -164,6 +168,7 @@ Customer risk profiles are exported to:
 - `customer_risk_summary.csv`
 
 
+
 ## Transaction Flagging
 
 Each transaction is flagged as suspicious if **any** of the following conditions apply:
@@ -175,7 +180,7 @@ Each transaction is flagged as suspicious if **any** of the following conditions
 Flagged transactions are saved to:
 - `flagged_transactions.csv`
 
----
+
 
 ## Results & Performance
 
@@ -194,12 +199,14 @@ After running the full pipeline:
 This indicates that the system successfully detected nearly **three out of every four fraudulent transactions**.
 
 
+
 ## Financial Impact
 
 The total transaction amount associated with correctly flagged fraud cases:
 - **$4,990,545.73**
 
 This represents the estimated amount of fraudulent spending identified by the system.
+
 
 
 ## Fraud Concentration Insights
@@ -212,6 +219,7 @@ The most frequently flagged transaction categories were:
 - misc_pos
 
 This suggests that fraud activity is concentrated in specific transaction types rather than being uniformly distributed.
+
 
 
 ## Outputs Generated
