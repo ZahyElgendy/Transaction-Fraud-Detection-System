@@ -1,3 +1,8 @@
+# data files (do not upload)
 Data/
 Data/*.csv
 *.csv
+
+# python cache (do not upload)
+__pycache__/
+*.pyc
