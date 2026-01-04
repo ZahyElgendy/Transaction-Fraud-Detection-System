@@ -70,8 +70,8 @@ Final cleaned dataset:
 - **1,852,394 rows**
 - **20 columns**
 
----
 
+---
 ## Data Visualization (Post-Preprocessing)
 
 After preprocessing, the system performs visual analysis on the cleaned dataset using the `DataVisualizer` class.  
@@ -82,19 +82,33 @@ The following analyses are produced:
 ### Fraud Distribution
 - Pie chart showing the proportion of fraudulent vs legitimate transactions.
 
+![Fraud Distribution](outputs/images/fraud_dist.png)
+
 ### Transaction Amount Analysis
 - Side-by-side histograms comparing transaction amounts for fraud and non-fraud cases.
 - Boxplot highlighting differences and outliers between legitimate and fraudulent transaction amounts.
+
+![Amount Histogram](outputs/images/amount_histogram.png)
+
+![Amount Boxplot](outputs/images/amount_boxplot.png)
 
 ### Time-Based Patterns
 - Hourly transaction frequency by fraud status (log-scaled for visibility).
 - Monthly transaction volume trends across the dataset timeline.
 
+![Hourly Time Patterns](outputs/images/time_patterns.png)
+
+![Monthly Volume](outputs/images/monthly_volume.png)
+
 ### Age-Based Risk Analysis
 - Bar chart showing fraud probability (%) across customer age groups.
 
+![Age Risk](outputs/images/age_risk.png)
+
 ### Category-Based Risk Analysis
 - Horizontal bar chart ranking transaction categories by fraud rate.
+
+![Category Risk](outputs/images/category_risk.png)
 
 These visualizations help reveal behavioral patterns, validate risk assumptions, and support the design of downstream customer risk scoring and transaction flagging logic.
 
